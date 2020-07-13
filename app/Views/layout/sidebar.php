@@ -1,32 +1,84 @@
-                <div class="navbar-default sidebar" role="navigation">
-                  <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
-                      <li class="sidebar-search">
-                        <div class="input-group custom-search-form">
-                          <input type="text" class="form-control" placeholder="Search...">
-                          <span class="input-group-btn">
-                            <button class="btn btn-primary" type="button">
-                              <i class="fa fa-search"></i>
-                            </button>
-                          </span>
-                        </div>
-                        <!-- /input-group -->
-                      </li>
-                      <li>
-                        <a href="<?= base_url(); ?>"><i class="fa fa-globe fa-fw"></i> Pemetaan</a>
-                      </li>
-                      <li>
-                        <a href="<?= base_url(); ?>/kantor"><i class="fa fa-home fa-fw"></i> Kantor</a>
-                      </li>
-                      <li>
-                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-                      </li>
-                      <li>
-                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-                      </li>
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <!-- Brand Logo -->
+  <a href="<?= base_url(); ?>" class="brand-link">
+    <img src="<?= base_url(); ?>/template/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <span class="brand-text font-weight-light">AdminLTE 3</span>
+  </a>
 
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Sidebar user (optional) -->
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="image">
+        <img src="<?= base_url(); ?>/template/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+      </div>
+      <div class="info">
+        <a href="#" class="d-block">Alexander Pierce</a>
+      </div>
+    </div>
 
-                    </ul>
-                  </div>
-                </div>
-                </nav>
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+        <li class="nav-item has-treeview">
+          <a href="/" class="nav-link">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>
+              Dashboard
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="<?= base_url(); ?>" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Pemetaan</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="<?= base_url(); ?>/kantor" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Kantor</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="<?= base_url(); ?>" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Dashboard v3</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="<?= base_url(); ?>/kantor" class="nav-link">
+            <i class="nav-icon far fa-image"></i>
+            <p>
+              Kantor
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="<?= base_url(); ?>/" class="nav-link">
+            <i class="nav-icon far fa-calendar-alt"></i>
+            <p>
+              Gallery
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="<?= base_url(); ?>/" class="nav-link">
+            <i class="nav-icon far fa-envelope"></i>
+            <p>
+              Gallery
+            </p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>
+  <!-- /.sidebar -->
+</aside>
