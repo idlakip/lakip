@@ -8,7 +8,7 @@
     <div class="col-12">
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">DataTable <?= $title; ?></h3>
+          <h3 class="card-title">DataTable <a href="<?= base_url('kantor/add'); ?>" class="btn btn-sm btn-primary">Add <?= $title; ?></a></h3>
         </div>
 
         <div class="card-body">

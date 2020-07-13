@@ -10,6 +10,7 @@ class Kantor extends BaseController
 
   public function __construct()
   {
+    helper('form');
     $this->M_kantor = new M_kantor();
   }
 
@@ -24,5 +25,12 @@ class Kantor extends BaseController
   }
 
   //--------------------------------------------------------------------
-
+  public function add()
+  {
+    $data = [
+      'title' => 'Add Kantor',
+      //'isi' => 's_home', // s_ = template & v_ = v_template
+    ];
+    return view('s_add_kantor', $data);
+  }
 }
