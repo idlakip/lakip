@@ -591,6 +591,6 @@
 
 </section>
 <!-- /.content -->
-<!-- </div> -->
+</div>
 <!-- /.content-wrapper -->
 <?= $this->endSection(); ?>

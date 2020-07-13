@@ -8,25 +8,25 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Startmin - Bootstrap Admin Theme</title>
+  <title><?= $title; ?></title>
 
   <!-- Bootstrap Core CSS -->
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?= base_url(); ?>/template/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- MetisMenu CSS -->
-  <link href="../css/metisMenu.min.css" rel="stylesheet">
+  <link href="<?= base_url(); ?>/template/css/metisMenu.min.css" rel="stylesheet">
 
   <!-- Timeline CSS -->
-  <link href="../css/timeline.css" rel="stylesheet">
+  <link href="<?= base_url(); ?>/template/css/timeline.css" rel="stylesheet">
 
   <!-- Custom CSS -->
-  <link href="../css/startmin.css" rel="stylesheet">
+  <link href="<?= base_url(); ?>/template/css/startmin.css" rel="stylesheet">
 
   <!-- Morris Charts CSS -->
-  <link href="../css/morris.css" rel="stylesheet">
+  <link href="<?= base_url(); ?>/template/css/morris.css" rel="stylesheet">
 
   <!-- Custom Fonts -->
-  <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="<?= base_url(); ?>/template/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,7 +41,7 @@
   <?= $this->include('layout/nav_top'); ?>
   <?= $this->include('layout/sidebar'); ?>
   <?= $this->include('layout/content_wrapper'); ?>
-  <?= $this->renderSection('_content'); ?>
+  <?= $this->renderSection('content'); ?>
 
   </div>
   <!-- /.row -->
@@ -54,21 +54,21 @@
   <!-- /#wrapper -->
 
   <!-- jQuery -->
-  <script src="../js/jquery.min.js"></script>
+  <script src="<?= base_url(); ?>/template/js/jquery.min.js"></script>
 
   <!-- Bootstrap Core JavaScript -->
-  <script src="../js/bootstrap.min.js"></script>
+  <script src="<?= base_url(); ?>/template/js/bootstrap.min.js"></script>
 
   <!-- Metis Menu Plugin JavaScript -->
-  <script src="../js/metisMenu.min.js"></script>
+  <script src="<?= base_url(); ?>/template/js/metisMenu.min.js"></script>
 
   <!-- Morris Charts JavaScript -->
-  <script src="../js/raphael.min.js"></script>
-  <script src="../js/morris.min.js"></script>
-  <script src="../js/morris-data.js"></script>
+  <script src="<?= base_url(); ?>/template/js/raphael.min.js"></script>
+  <script src="<?= base_url(); ?>/template/js/morris.min.js"></script>
+  <script src="<?= base_url(); ?>/template/js/morris-data.js"></script>
 
   <!-- Custom Theme JavaScript -->
-  <script src="../js/startmin.js"></script>
+  <script src="<?= base_url(); ?>/template/js/startmin.js"></script>
 
 </body>
 
