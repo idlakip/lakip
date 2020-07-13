@@ -16,6 +16,12 @@
   <!-- MetisMenu CSS -->
   <link href="<?= base_url(); ?>/template/css/metisMenu.min.css" rel="stylesheet">
 
+  <!-- DataTables CSS -->
+  <link href="<?= base_url(); ?>/template/css/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+
+  <!-- DataTables Responsive CSS -->
+  <link href="<?= base_url(); ?>/template/css/dataTables/dataTables.responsive.css" rel="stylesheet">
+
   <!-- Timeline CSS -->
   <link href="<?= base_url(); ?>/template/css/timeline.css" rel="stylesheet">
 
@@ -28,21 +34,17 @@
   <!-- Custom Fonts -->
   <link href="<?= base_url(); ?>/template/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
 </head>
 
 <body>
 
-  <?= $this->include('layout/nav_top'); ?>
+  <?= $this->include('layout/v_header'); ?>
   <?= $this->include('layout/sidebar'); ?>
-  <?= $this->include('layout/content_wrapper'); ?>
+  <?= $this->include('layout/wrapper'); ?>
   <?= $this->renderSection('content'); ?>
 
+  </div>
+  <!-- /.col-lg-12 -->
   </div>
   <!-- /.row -->
   </div>
@@ -67,8 +69,21 @@
   <script src="<?= base_url(); ?>/template/js/morris.min.js"></script>
   <script src="<?= base_url(); ?>/template/js/morris-data.js"></script>
 
+  <!-- DataTables JavaScript -->
+  <script src="<?= base_url(); ?>/template/js/dataTables/jquery.dataTables.min.js"></script>
+  <script src="<?= base_url(); ?>/template/js/dataTables/dataTables.bootstrap.min.js"></script>
+
   <!-- Custom Theme JavaScript -->
   <script src="<?= base_url(); ?>/template/js/startmin.js"></script>
+
+  <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+  <script>
+    $(document).ready(function() {
+      $('#dataTablesk').DataTable({
+        responsive: true
+      });
+    });
+  </script>
 
 </body>
 

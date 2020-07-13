@@ -16,7 +16,7 @@
         <a href="<?= base_url(); ?>"><i class="fa fa-globe fa-fw"></i> Pemetaan</a>
       </li>
       <li>
-        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+        <a href="<?= base_url(); ?>/kantor"><i class="fa fa-home fa-fw"></i> Kantor</a>
       </li>
       <li>
         <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
@@ -24,17 +24,3 @@
       <li>
         <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
       </li>
-
-    </ul>
-  </div>
-  <!-- /.sidebar-collapse -->
-</div>
-<!-- /.navbar-static-side -->
-</nav>
-
-<!-- Page Content -->
-<div id="page-wrapper">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-12">
-        <h1 class="page-header"><?= $title; ?></h1>
