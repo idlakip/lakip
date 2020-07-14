@@ -110,13 +110,13 @@
       $('#longitude').val(position.lng).keyup();
     });
 
-    $("#latitude, #longitude").change(function() {
-      var position = [parseInt($("#latitude").val()), parseInt($("#longitude").val())];
-      marker.setLatLng(position, {
-        draggable: 'true'
-      }).bindPopup(position).update();
-      map.panTo(position);
-    });
+    // $("#latitude, #longitude").change(function() {
+    //   var position = [parseInt($("#latitude").val()), parseInt($("#longitude").val())];
+    //   marker.setLatLng(position, {
+    //     draggable: 'true'
+    //   }).bindPopup(position).update();
+    //   map.panTo(position);
+    // });
 
     map.addLayer(marker);
   </script>
