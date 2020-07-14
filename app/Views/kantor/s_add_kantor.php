@@ -11,7 +11,7 @@
         </div>
         <div class="card-body">
 
-          <div id="mapid" style="height: 400px;">
+          <div id="mapid" style="height: 600px;">
 
           </div>
 

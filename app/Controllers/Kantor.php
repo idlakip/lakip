@@ -21,16 +21,16 @@ class Kantor extends BaseController
       'kantor' => $this->M_kantor->get_all_data(),
       //'isi' => 's_home', // s_ = template & v_ = v_template
     ];
-    return view('s_home', $data);
+    return view('kantor/s_home', $data);
   }
 
   //--------------------------------------------------------------------
   public function add()
   {
     $data = [
-      'title' => 'Add Kantor',
+      'title' => 'Add Kantor'
       //'isi' => 's_home', // s_ = template & v_ = v_template
     ];
-    return view('s_add_kantor', $data);
+    return view('kantor/s_add_kantor', $data);
   }
 }
