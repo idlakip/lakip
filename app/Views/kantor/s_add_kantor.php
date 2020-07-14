@@ -11,7 +11,7 @@
         </div>
         <div class="card-body">
 
-          <div id="mapid" style="height: 600px;">
+          <div id="map" style="height: 735px;">
 
           </div>
 
@@ -84,7 +84,7 @@
     if (curLocation[0] == 0 && curLocation[1] == 0) {
       curLocation = [-6.164878, 106.824698];
     }
-    var map = L.map('mapid').setView([-6.164878, 106.824698], 14);
+    var map = L.map('map').setView([-6.164878, 106.824698], 14);
 
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
       maxZoom: 18,
@@ -110,11 +110,13 @@
       $('#longitude').val(position.lng).keyup();
     });
 
-    // $("#latitude, #longitude").change(function() {
-    //   var position = [parseInt($("#latitude").val()), parseInt($("#longitude").val())]; {
-    //     draggable: 'true'
-    //   }).bindPopup(position).update(); map.panTo(position);
-    // });
+    $("#latitude, #longitude").change(function() {
+      var position = [parseInt($("#latitude").val()), parseInt($("#longitude").val())];
+      marker.setLatLng(position, {
+        draggable: 'true'
+      }).bindPopup(position).update();
+      map.panTo(position);
+    });
 
     map.addLayer(marker);
   </script>
