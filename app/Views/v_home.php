@@ -2,7 +2,7 @@
   <div class="col-12">
     <div class="card">
       <div class="card-header">
-        <div id="mapid" style="height: 400px;">
+        <div id="mapid" style="height: 500px;">
 
           <script>
             var mymap = L.map('mapid').setView([-6.164878, 106.824698], 13);
@@ -16,6 +16,14 @@
               tileSize: 512,
               zoomOffset: -1
             }).addTo(mymap);
+
+            <?php foreach ($kantor as $key => $value) { ?>
+              L.marker([<?= $value['latitude']; ?>, <?= $value['longitude']; ?>]).addTo(mymap)
+                .bindPopup("<b><?= $value['nama_kantor']; ?></b><br/>" +
+                  "<img src="
+                  <?= base_url('foto/' . $value['photo']) ?> " width='100px'>");
+
+            <?php } ?>
           </script>
         </div>
       </div>

@@ -27,8 +27,6 @@
                 <th>Nama Kantor</th>
                 <th>Telephone</th>
                 <th>Alamat</th>
-                <th>Latitude</th>
-                <th>Longitude</th>
                 <th>Description</th>
                 <th>Foto</th>
                 <th>Aksi</th>
@@ -42,8 +40,6 @@
                   <td><?= $value['nama_kantor']; ?></td>
                   <td><?= $value['no_telp']; ?></td>
                   <td><?= $value['alamat']; ?></td>
-                  <td><?= $value['latitude']; ?></td>
-                  <td><?= $value['longitude']; ?></td>
                   <td><?= $value['description']; ?></td>
                   <td>
                     <img src=" <?= base_url('foto/' . $value['photo']); ?>" class="photo">
@@ -61,8 +57,6 @@
                 <th>Nama Kantor</th>
                 <th>Telephone</th>
                 <th>Alamat</th>
-                <th>Latitude</th>
-                <th>Longitude</th>
                 <th>Description</th>
                 <th>Foto</th>
                 <th>Aksi</th>
