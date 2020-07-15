@@ -13,6 +13,8 @@
   <!-- DataTables -->
   <link rel="stylesheet" href="<?= base_url(); ?>/template/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="<?= base_url(); ?>/template/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <!-- MyCSS style -->
+  <link rel="stylesheet" href="/css/style.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= base_url(); ?>/template/dist/css/adminlte.min.css">
 

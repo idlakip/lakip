@@ -10,4 +10,9 @@ class M_kantor extends Model
   {
     return $this->db->table('gis_kantor')->get()->getResultArray();
   }
+
+  public function insert_data($data)
+  {
+    return $this->db->table('gis_kantor')->insert($data);
+  }
 }

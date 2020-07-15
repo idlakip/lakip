@@ -8,18 +8,29 @@
     <div class="col-12">
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">DataTable <a href="<?= base_url('kantor/add'); ?>" class="btn btn-sm btn-primary">Add <?= $title; ?></a></h3>
+          <h3 class="card-title"><a href="<?= base_url('kantor/add'); ?>" class="btn btn-sm btn-primary">Add <?= $title; ?></a></h3>
         </div>
 
         <div class="card-body">
-          <table id="example1" class="table table-bordered table-striped">
+          <?php
+
+          if (!empty(session()->getFlashdata('success'))) { ?>
+            <div class="alert alert-success">
+              <?php echo session()->getFlashdata('success'); ?>
+            </div>
+          <?php }; ?>
+          <table id="DTable1" class="table table-bordered table-striped">
             <thead>
               <tr>
                 <th> No.</th>
                 <th>Nama Kantor</th>
                 <th>Telephone</th>
                 <th>Alamat</th>
-                <th>Photo</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Description</th>
+                <th>Foto</th>
+                <th>Aksi</th>
               </tr>
             </thead>
             <tbody>
@@ -27,23 +38,33 @@
               foreach ($kantor as $key => $value) { ?>
                 <tr>
                   <td><?= $no++; ?></td>
-                  <td><?= $value['ket']; ?></td>
-                  <td><?= $value['gambar']; ?></td>
-                  <td><?= $value['csrf_test_name']; ?></td>
+                  <td><?= $value['nama_kantor']; ?></td>
+                  <td><?= $value['no_telp']; ?></td>
+                  <td><?= $value['alamat']; ?></td>
+                  <td><?= $value['latitude']; ?></td>
+                  <td><?= $value['longitude']; ?></td>
+                  <td><?= $value['description']; ?></td>
                   <td>
-                    <a href="" class="btn btn-sm btn-success">Edit</a>
-                    <a href="" class="btn btn-sm btn-danger">Hapus</a>
+                    <img src=" <?= base_url('foto/' . $value['photo']); ?>" class="photo">
+                  </td>
+                  <td>
+                    <a href="" class="btn btn-sm btn-success"><i class="fas fa-edit"></i>Edit</a>
+                    <a href="" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i>Hapus</a>
                   </td>
                 </tr>
               <?php } ?>
             </tbody>
             <tfoot>
               <tr>
-                <th>Rendering engine</th>
-                <th>Browser</th>
-                <th>Platform(s)</th>
-                <th>Engine version</th>
-                <th>CSS grade</th>
+                <th> No.</th>
+                <th>Nama Kantor</th>
+                <th>Telephone</th>
+                <th>Alamat</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Description</th>
+                <th>Foto</th>
+                <th>Aksi</th>
               </tr>
             </tfoot>
           </table>

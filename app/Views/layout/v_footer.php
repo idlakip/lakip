@@ -25,6 +25,9 @@
 <script src="<?= base_url(); ?>/template/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="<?= base_url(); ?>/template/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
 <script src="<?= base_url(); ?>/template/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<!-- bs-custom-file-input -->
+<script src="<?= base_url(); ?>/template/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+
 <!-- AdminLTE App -->
 <script src="<?= base_url(); ?>/template/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
@@ -32,11 +35,11 @@
 <!-- page script -->
 <script>
   $(function() {
-    $("#example1").DataTable({
+    $("#DTable1").DataTable({
       "responsive": true,
       "autoWidth": false,
     });
-    $('#example2').DataTable({
+    $('#DTable2').DataTable({
       "paging": true,
       "lengthChange": false,
       "searching": false,
@@ -45,6 +48,11 @@
       "autoWidth": false,
       "responsive": true,
     });
+  });
+</script>
+<script>
+  $(function() {
+    bsCustomFileInput.init();
   });
 </script>
 </body>
