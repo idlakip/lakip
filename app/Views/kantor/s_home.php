@@ -19,6 +19,7 @@
               <?php echo session()->getFlashdata('success'); ?>
             </div>
           <?php }; ?>
+          <?= csrf_field(); ?>
           <table id="DTable1" class="table table-bordered table-striped">
             <thead>
               <tr>
@@ -48,7 +49,7 @@
                     <img src=" <?= base_url('foto/' . $value['photo']); ?>" class="photo">
                   </td>
                   <td>
-                    <a href="" class="btn btn-sm btn-success"><i class="fas fa-edit"></i>Edit</a>
+                    <a href="<?= base_url('kantor/edit/' . $value['id_kantor']); ?>" class="btn btn-sm btn-success"><i class="fas fa-edit"></i>Edit</a>
                     <a href="" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i>Hapus</a>
                   </td>
                 </tr>

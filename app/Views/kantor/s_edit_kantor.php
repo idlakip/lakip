@@ -21,7 +21,7 @@
     <div class="col-sm-5">
       <div class="card card-primary">
         <div class="card-header">
-          <h3 class="card-title">Data Kantor </h3>
+          <h3 class="card-title">Edit Kantor </h3>
         </div>
         <div class="card-body">
           <?php
@@ -37,11 +37,11 @@
             </div>
           <?php } ?>
 
-          <?php echo form_open_multipart('kantor/save'); ?>
+          <?php echo form_open_multipart('kantor/update/' . $kantor['id_kantor']); ?>
           <?= csrf_field(); ?>
           <div class="form-group">
             <label for="nama_kantor">Nama Kantor</label>
-            <input type="text" class="form-control form-control-sm" id="nama_kantor" name="nama_kantor" placeholder="Kantor" autofocus>
+            <input type="text" class="form-control form-control-sm" id="nama_kantor" name="nama_kantor" value="<?= $kantor['nama_kantor']; ?>">
           </div>
           <div class="form-group">
             <label for="no_telp">No. Kantor</label>
@@ -52,36 +52,38 @@
               <div class="input-group-prepend">
                 <span class="input-group-text"><i class="fas fa-phone"></i></span>
               </div>
-              <input type="text" class="form-control form-control-sm" id="no_telp" name="no_telp" data-inputmask="'mask': ['9999 9999 9[x99]', '9999 9999 9[9]99']" data-mask>
+              <input type="text" class="form-control form-control-sm" id="no_telp" name="no_telp" value="<?= $kantor['no_telp']; ?>" data-inputmask="'mask': ['9999 999 99[99]', '9999 9999 9[9]99']" data-mask>
             </div>
           </div>
           <div class="form-group">
             <label for="alamat">Alamat</label>
-            <input type="text" class="form-control form-control-sm" id="alamat" name="alamat" placeholder="Alamat kantor">
+            <input type="text" class="form-control form-control-sm" id="alamat" name="alamat" value="<?= $kantor['alamat']; ?>">
           </div>
 
           <div class="form-group">
             <label for="pimpinan">Pimpinan</label>
-            <input type="text" class="form-control form-control-sm" id="pimpinan" name="pimpinan" placeholder="Pimpinan kantor">
+            <input type="text" class="form-control form-control-sm" id="pimpinan" name="pimpinan" value="<?= $kantor['pimpinan']; ?>">
           </div>
 
           <div class="form-group">
             <label for="latitude">Lokasi Kantor</label>
-            <input type="text" class="form-control form-control-sm" id="latitude" name="latitude" placeholder="Latitude">
+            <input type="text" class="form-control form-control-sm" id="latitude" name="latitude" value="<?= $kantor['latitude']; ?>">
           </div>
 
           <div class="form-group">
             <!-- <label for="longitude">Longitude Kantor</label> -->
-            <input type="text" class="form-control form-control-sm" id="longitude" name="longitude" placeholder="Longitude">
+            <input type="text" class="form-control form-control-sm" id="longitude" name="longitude" value="<?= $kantor['longitude']; ?>">
           </div>
 
           <div class="form-group">
             <label for="description">Description</label>
-            <!-- <input type="text" class="form-control form-control-sm" id="description" name="description" placeholder="description kantor"> -->
-            <textarea class="form-control form-control-sm" id="description" name="description" placeholder="Description kantor"></textarea>
+            <input type="text" class="form-control form-control-sm" id="description" name="description" value="<?= $kantor['description']; ?>">
+            <!-- <textarea class="form-control form-control-sm" id="description" name="description" value="<?= $kantor['description']; ?>"></textarea> -->
           </div>
-          <div class="form-group">
-            <label for="photo">Foto Kantor</label>
+          <div class=" form-group">
+            <label> Preview</label><br>
+            <img src="<?= base_url('foto/' . $kantor['photo']); ?>" alt="<?= $kantor['photo']; ?>" width="100px"><br>
+            <label for="photo"> Ganti Foto Kantor</label>
             <div class="input-group">
               <div class="custom-file">
                 <input type="file" class="custom-file-input" id="photo" name="photo">
@@ -104,9 +106,9 @@
     <script>
       var curLocation = [0, 0];
       if (curLocation[0] == 0 && curLocation[1] == 0) {
-        curLocation = [-6.164878, 106.824698];
+        curLocation = [<?= $kantor['latitude']; ?>, <?= $kantor['longitude']; ?>];
       }
-      var map = L.map('map').setView([-6.164878, 106.824698], 14);
+      var map = L.map('map').setView([<?= $kantor['latitude']; ?>, <?= $kantor['longitude']; ?>], 14);
 
       L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
         maxZoom: 18,

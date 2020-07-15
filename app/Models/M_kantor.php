@@ -15,4 +15,14 @@ class M_kantor extends Model
   {
     return $this->db->table('gis_kantor')->insert($data);
   }
+
+  public function detail($id_kantor)
+  {
+    return $this->db->table('gis_kantor')->where('id_kantor', $id_kantor)->get()->getRowArray();
+  }
+
+  public function update_kantor($data, $id_kantor)
+  {
+    return $this->db->table('gis_kantor')->update($data, array('id_kantor' => $id_kantor));
+  }
 }
