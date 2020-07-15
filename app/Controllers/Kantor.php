@@ -215,4 +215,11 @@ class Kantor extends BaseController
     }
   }
   //--------------------------------------------------------------------
+
+  public function delete($id_kantor)
+  {
+    $this->M_kantor->delete_kantor($id_kantor);
+    session()->setFlashdata('success', 'Data berhasil dihapus');
+    return redirect()->to(base_url('kantor'));
+  }
 }

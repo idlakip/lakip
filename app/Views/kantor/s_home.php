@@ -50,7 +50,7 @@
                   </td>
                   <td>
                     <a href="<?= base_url('kantor/edit/' . $value['id_kantor']); ?>" class="btn btn-sm btn-success"><i class="fas fa-edit"></i>Edit</a>
-                    <a href="" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i>Hapus</a>
+                    <a href="<?= base_url('kantor/delete/' . $value['id_kantor']); ?>" class="btn btn-sm btn-danger" onclick="return confirm('Apakah yakin ingin hapus???')"><i class="fas fa-trash-alt"></i>Hapus</a>
                   </td>
                 </tr>
               <?php } ?>

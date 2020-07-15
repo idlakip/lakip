@@ -25,4 +25,9 @@ class M_kantor extends Model
   {
     return $this->db->table('gis_kantor')->update($data, array('id_kantor' => $id_kantor));
   }
+
+  public function delete_kantor($id_kantor)
+  {
+    return $this->db->table('gis_kantor')->delete(array('id_kantor' => $id_kantor));
+  }
 }
