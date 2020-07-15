@@ -126,19 +126,21 @@
       marker.on('dragend', function(event) {
         var position = marker.getLatLng();
         marker.setLatLng(position, {
-          draggable: 'true'
+          draggable: 'true',
         }).bindPopup(position).update();
         $('#latitude').val(position.lat);
         $('#longitude').val(position.lng).keyup();
       });
 
-      // $("#latitude, #longitude").change(function() {
-      //   var position = [parseInt($("#latitude").val()), parseInt($("#longitude").val())];
-      //   marker.setLatLng(position, {
-      //     draggable: 'true'
-      //   }).bindPopup(position).update();
-      //   map.panTo(position);
-      // });
+      map.addLayer(marker);
+
+      $("#latitude, #longitude").change(function() {
+        var position = [parseInt($("#latitude").val()), parseInt($("#longitude").val())];
+        marker.setLatLng(position, {
+          draggable: 'true',
+        }).bindPopup(position).update();
+        map.panTo(position);
+      });
 
       map.addLayer(marker);
     </script>
