@@ -29,9 +29,10 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= base_url(); ?>/template/dist/css/adminlte.min.css">
   <!-- MyCSS style -->
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="<?= base_url(); ?>/css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+  <script src="<?= base_url(); ?>/chart/dist/Chart.min.js"></script>
 
 </head>
 
@@ -65,6 +66,8 @@
 
   <!-- jQuery -->
   <script src="<?= base_url(); ?>/template/plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI -->
+  <script src="<?= base_url(); ?>/template/plugins/jquery-ui/jquery-ui.min.js"></script>
   <!-- Bootstrap 4 -->
   <script src="<?= base_url(); ?>/template/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- DataTables -->
@@ -89,8 +92,16 @@
   <script src="<?= base_url(); ?>/template/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
   <!-- Bootstrap Switch -->
   <script src="<?= base_url(); ?>/template/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+  <!-- ChartJS -->
+  <script src="<?= base_url(); ?>/template/plugins/chart.js/Chart.min.js"></script>
   <!-- AdminLTE App -->
   <script src="<?= base_url(); ?>/template/dist/js/adminlte.min.js"></script>
+  <!-- FLOT CHARTS -->
+  <script src="<?= base_url(); ?>/template/plugins/flot/jquery.flot.js"></script>
+  <!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
+  <script src="<?= base_url(); ?>/template/plugins/flot-old/jquery.flot.resize.min.js"></script>
+  <!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+  <script src="<?= base_url(); ?>/template/plugins/flot-old/jquery.flot.pie.min.js"></script>
   <!-- AdminLTE for demo purposes -->
   <script src="<?= base_url(); ?>/template/dist/js/demo.js"></script>
   <!-- page script -->
@@ -98,7 +109,7 @@
     $(function() {
       $("#DTable1").DataTable({
         "responsive": true,
-        "autoWidth": false,
+        "autoWidth": true,
       });
       $('#DTable2').DataTable({
         "paging": true,

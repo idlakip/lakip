@@ -17,9 +17,9 @@
   <link rel="stylesheet" href="/css/style.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= base_url(); ?>/template/dist/css/adminlte.min.css">
-
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+  <script src="<?= base_url(); ?>/chart/dist/Chart.min.js"></script>
 
 </head>
 

@@ -39,40 +39,40 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?= base_url(); ?>/kantor" class="nav-link">
+              <a href="<?= base_url(); ?>/template/pages/examples/blank.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Kantor</p>
+                <p>Admin LTE</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?= base_url(); ?>" class="nav-link">
+              <a href="<?= base_url(); ?>/chart/samples/" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Dashboard v3</p>
+                <p>Charts</p>
               </a>
             </li>
           </ul>
         </li>
         <li class="nav-item">
           <a href="<?= base_url(); ?>/kantor" class="nav-link">
-            <i class="nav-icon far fa-image"></i>
+            <i class="nav-icon fas fa-tree"></i>
             <p>
               Kantor
             </p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="<?= base_url(); ?>/" class="nav-link">
+          <a href="<?= base_url(); ?>" class="nav-link">
             <i class="nav-icon far fa-calendar-alt"></i>
             <p>
-              Gallery
+              Pemetaan
             </p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="<?= base_url(); ?>/" class="nav-link">
-            <i class="nav-icon far fa-envelope"></i>
+          <a href="<?= base_url(); ?>/charts" class="nav-link">
+            <i class="nav-icon fas fa-chart-line"></i>
             <p>
-              Gallery
+              Grafik Charts
             </p>
           </a>
         </li>
