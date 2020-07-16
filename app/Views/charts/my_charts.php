@@ -2,9 +2,29 @@
 foreach ($chart as $key => $value) {
   $thn[] = $value['tahun'];
   $jml[] = $value['jumlah'];
-  $bln[] = $value['bulan'];
 }; ?>
-<canvas id="myChart" width="300" height="100"></canvas>
+
+<div class="row">
+  <div class="col">
+    <div class="col-sm-10">
+      <div class="card card-primary">
+        <div class="card-header">
+          <h3 class="card-title">Charts <a href="<?= base_url('charts/add') ?>"> Data</a></h3>
+        </div>
+        <div class="card-body">
+          <?php
+          if (!empty(session()->getFlashdata('success'))) { ?>
+            <div class="alert alert-success">
+              <?php echo session()->getFlashdata('success'); ?>
+            </div>
+          <?php }; ?>
+          <?= csrf_field(); ?>
+          <canvas id="myChart" width="300" height="100"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <script>
@@ -24,7 +44,13 @@ foreach ($chart as $key => $value) {
           'rgba(255, 206, 86, 0.80)',
           'rgba(75, 192, 192, 0.80)',
           'rgba(153, 102, 255, 0.80)',
-          'rgba(255, 159, 64, 0.80)'
+          'rgba(255, 255, 0, 0.80)',
+          'rgba(127, 255, 212, 0.80)',
+          'rgba(34, 139, 34, 0.80)',
+          'rgba(0, 255, 127, 0.80)',
+          'rgba(255, 159, 64, 0.80)',
+          'rgba(107, 142, 35, 0.80)',
+          'rgba(255, 140, 0, 0.80)'
         ],
         borderColor: [
           'rgba(255, 99, 132, 1)',
