@@ -28,7 +28,7 @@ class Charts extends BaseController
   public function add()
   {
     $data = [
-      'title' => 'Add Data Charts',
+      'title' => 'Data Charts',
       'chart' => $this->ModelCharts->get_all_data(),
       //'isi' => 's_home', // s_ = template & v_ = v_template
     ];

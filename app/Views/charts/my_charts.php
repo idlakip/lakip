@@ -19,6 +19,8 @@ foreach ($chart as $key => $value) {
             </div>
           <?php }; ?>
           <?= csrf_field(); ?>
+          <!-- <canvas id="myChart" width="300" height="100"></canvas> -->
+          <!-- <div class="chart-container" style="position: relative; height:40vh; width:80vw"> -->
           <canvas id="myChart" width="300" height="100"></canvas>
         </div>
       </div>

@@ -16,7 +16,6 @@
           <h3 class="card-title">Data Charts BAR</h3>
         </div>
         <div class="card-body">
-
           <canvas id="myChart"></canvas>
 
         </div>
@@ -140,7 +139,7 @@
   <script>
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {
-      type: 'bar', // line, bar, pie, radar'circle'
+      type: 'radar', // line, bar, pie, radar'circle'
 
       data: {
         // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
